@@ -13,7 +13,7 @@ public class Product {
 	}
 	public String getProductName() {
 		return productName;
-		//dsa 
+		//是我的
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
