@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 
+    package:包 struts使用packages来组织模块
+    name:必须其他的包应用当钱包
+    extends:通常继承struts-default   
+     -->
+    <package name="helloWorld" extends="struts-default">
+    
+    <!-- 
+                 配置一个action:一个struts2的请求就是action
+                 name:对应一个servletPath;去除/
+                 result：结果
+    -->
+    <action name="product-input">
+        <result>/WEB-INF/pages/input.jsp</result>
+    </action>
+    
+    
+    <action name="product-save" class="com.Struts2.Product" method="save">
+        <result name="details">/WEB-INF/pages/details.jsp</result>
+        <result name="first">/WEB-INF/pages/frist.jsp</result>
+        <result name="second">/WEB-INF/pages/second.jsp</result>
+    </action> 
+    
+
+  </package>
+</struts>
